@@ -66,6 +66,12 @@ public class Teste{
         System.out.println("");
         System.out.println("");
         
+        Float liquido = contra.calculaTotalLiquido(lancamentos);
+        System.out.println("Total Líquido: " + liquido);
+
+        System.out.println("");
+        System.out.println("");
+        
     }
 }
 
