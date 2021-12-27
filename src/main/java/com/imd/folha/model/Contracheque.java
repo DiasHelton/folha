@@ -8,15 +8,6 @@ public class Contracheque {
     private Lancamento[] lancamentos;
     private Float totalLiquido;
     
-    
-    
-    public Float calculaLiquido(lancamentos){
-        for (lancamentos l : lancamentos){
-        totalLiquido = sum(lancamentos.getLancamento().getValor());
-        }
-        return totalLiquido;
-    }
-
     public Contracheque() {
     }
 
@@ -49,6 +40,31 @@ public class Contracheque {
     }
     public void setContratante(Contratante contratante) {
         this.contratante = contratante;
+    }
+    
+    //Métodos 
+    public Float calculaTotalLiquido(Lancamento[] lancam){
+        Float total = 0f;
+        for (int i = 0; i < lancam.length; i++){
+            total += lancam[i].getValor();           
+        }
+        this.setTotalLiquido(total);
+        return totalLiquido;
     }   
+
+    //Brainstorm--------------------------------------------------------------------
+
+        // public Float calculaLiquido(lancamentos){
+    //     for (lancamentos l : lancamentos){
+    //     totalLiquido = sum(lancamentos.getLancamento().getValor());
+    //     }
+    //     return totalLiquido;
+    // }
+
+    // public Float calculaTotalLiquido(Lancamento[] esses){
+    //  this.setTotalLiquido(esses[0].getValor() + esses[1].getValor() + esses[2].getValor());   
+    //  return totalLiquido;
+    // }
+
 }
 
