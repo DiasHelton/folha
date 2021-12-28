@@ -42,6 +42,15 @@ public class Contracheque {
         this.contratante = contratante;
     }
     
+    public Float calculaTotalLiquido(Lancamento[] lancam){
+        Float total = 0f;
+        for (int i = 0; i < lancam.length; i++){
+            total += lancam[i].getValor();           
+        }
+        this.setTotalLiquido(total);
+        return totalLiquido;
+    }   
+   
     //Métodos 
 
     // public void inserirLancamento(Lancamento n){
@@ -52,17 +61,7 @@ public class Contracheque {
 
 
     // public void excluirLancamento(){}
-
-
-
-    public Float calculaTotalLiquido(Lancamento[] lancam){
-        Float total = 0f;
-        for (int i = 0; i < lancam.length; i++){
-            total += lancam[i].getValor();           
-        }
-        this.setTotalLiquido(total);
-        return totalLiquido;
-    }   
+   
 
     //Brainstorm--------------------------------------------------------------------
 
