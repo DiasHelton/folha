@@ -43,6 +43,18 @@ public class Contracheque {
     }
     
     //Métodos 
+
+    // public void inserirLancamento(Lancamento n){
+    
+    //     Contracheque c  = Lancamento n;
+    // }
+
+
+
+    // public void excluirLancamento(){}
+
+
+
     public Float calculaTotalLiquido(Lancamento[] lancam){
         Float total = 0f;
         for (int i = 0; i < lancam.length; i++){

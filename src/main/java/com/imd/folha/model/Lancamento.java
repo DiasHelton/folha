@@ -22,5 +22,6 @@ public class Lancamento {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
     
 }
