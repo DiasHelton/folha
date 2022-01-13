@@ -1,4 +1,9 @@
-package com.imd.folha.model;
+package com.imd.folha;
+
+import com.imd.folha.model.Contracheque;
+import com.imd.folha.model.Contratado;
+import com.imd.folha.model.Contratante;
+import com.imd.folha.model.Lancamento;
 
 public class Teste{
     public static void main(String[] args) {
