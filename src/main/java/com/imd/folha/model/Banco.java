@@ -1,19 +1,41 @@
 package com.imd.folha.model;
 
-public class Banco {
-    private String nome;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Banco extends Pessoa{
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String cnpj;
     
-    public String getNome() {
-        return nome;
+    
+    public Banco() {
     }
-    public String getCNPJ() {
-        return cnpj;
-    }
-    public void setCNPJ(String cnpj) {
+
+    public Banco(Integer id, String cnpj) {
+        this.id = id;
         this.cnpj = cnpj;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+
+    public Integer getId() {
+        return id;
     }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+  
 }

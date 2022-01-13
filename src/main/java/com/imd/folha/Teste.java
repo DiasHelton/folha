@@ -8,6 +8,7 @@ import com.imd.folha.model.Lancamento;
 public class Teste{
     public static void main(String[] args) {
         
+        
         Contratante orgao = new Contratante();
         orgao.setCnpj("0098880001-01");
         orgao.setNome("DETRAN-RN");

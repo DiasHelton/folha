@@ -1,21 +1,32 @@
 package com.imd.folha.model;
 
-public class Contratado {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Contratado extends Pessoa{
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String matricula;
     private String nome;
     private String cpf;
     private Endereco endereco;
-    private String telefone;
     
+    public Contratado() {
+    }
+    public Contratado(Integer id, String matricula, String nome, String cpf, Endereco endereco) {
+        this.id = id;
+        this.matricula = matricula;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+    }
     public String getMatricula() {
         return matricula;
-    }
-    public String getTelefone() {
-        return telefone;
-    }
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
     }
     public Endereco getEndereco() {
         return endereco;
@@ -37,6 +48,12 @@ public class Contratado {
     }
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
     }
     
    

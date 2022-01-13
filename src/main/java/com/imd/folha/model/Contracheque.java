@@ -1,6 +1,16 @@
 package com.imd.folha.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Contracheque {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     
     private Contratante contratante;
     private Contratado contratado;
@@ -9,6 +19,23 @@ public class Contracheque {
     private Float totalLiquido;
     
     public Contracheque() {
+    }
+    public Contracheque(Integer id, Contratante contratante, Contratado contratado, String periodoReferencia,
+            Lancamento[] lancamentos, Float totalLiquido) {
+        this.id = id;
+        this.contratante = contratante;
+        this.contratado = contratado;
+        this.periodoReferencia = periodoReferencia;
+        this.lancamentos = lancamentos;
+        this.totalLiquido = totalLiquido;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Float getTotalLiquido() {

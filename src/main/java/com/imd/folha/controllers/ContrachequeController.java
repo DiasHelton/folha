@@ -6,7 +6,7 @@ public class ContrachequeController {
     
     public void inserirLancamento(String descricao, Float valor){
         
-        Lancamento lancamento = new Lancamento(descricao, valor);
+        Lancamento lancamento = new Lancamento(1, descricao, valor);
         lancamento.setDescricao(descricao);
         lancamento.setValor(valor);
         

@@ -1,18 +1,35 @@
 package com.imd.folha.model;
 
-public class Contratante {
-    private String razao;
-    private String nome;
-    private String cnpj;
-    private String endereco;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Contratante extends Pessoa{
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String razao;
+    private String cnpj;
+    private Endereco endereco;
+    
+    public Contratante(Integer id, String razao, String cnpj, Endereco endereco) {
+        this.id = id;
+        this.razao = razao;
+        this.cnpj = cnpj;
+        this.endereco = endereco;
+    }
+    public Contratante() {
+    }
     public String getRazao() {
         return razao;
     }
-    public String getEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
-    public void setEndereco(String endereco) {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
     public String getCnpj() {
@@ -21,13 +38,13 @@ public class Contratante {
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
     public void setRazao(String razao) {
         this.razao = razao;
+    }
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
