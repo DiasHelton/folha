@@ -4,31 +4,26 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public abstract class Pessoa {
+public class Pessoa {
     
     @Id
     private Integer id;
-    private String tipo;
+    private String pessoaTipo;
     private String nome;
     private String telefone;
     private String email;
     private Endereco endereço;
-    
-    public Pessoa(Integer id, String tipo, String nome, String telefone, String email, Endereco endereço) {
-        this.id = id;
-        this.tipo = tipo;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
-        this.endereço = endereço;
-    }
+   
     public Pessoa() {
+    }
+    public String getPessoaTipo() {
+        return pessoaTipo;
+    }
+    public void setPessoaTipo(String pessoaTipo) {
+        this.pessoaTipo = pessoaTipo;
     }
     public String getNome() {
         return nome;
-    }
-    public String getTipo() {
-        return tipo;
     }
     public String getEmail() {
         return email;
@@ -38,9 +33,6 @@ public abstract class Pessoa {
     }
     public Endereco getEndereço() {
         return endereço;
-    }
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
     }
     public void setEmail(String email) {
         this.email = email;
