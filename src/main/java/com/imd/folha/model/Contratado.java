@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity
 public class Contratado extends Pessoa{
     
@@ -12,39 +13,26 @@ public class Contratado extends Pessoa{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String matricula;
-    private String nome;
     private String cpf;
-    private Endereco endereco;
     
-    public Contratado() {
-    }
-    public Contratado(Integer id, String matricula, String nome, String cpf, Endereco endereco) {
+    public Contratado(Integer id, String matricula, String cpf, String nome, String telefone, String email, Endereco endereco) {
         this.id = id;
         this.matricula = matricula;
-        this.nome = nome;
         this.cpf = cpf;
-        this.endereco = endereco;
+        super.setNome(nome);
+        super.setTelefone(telefone);
+        super.setEmail(email);
+        super.setEndereco(endereco);
+        
     }
     public String getMatricula() {
         return matricula;
-    }
-    public Endereco getEndereco() {
-        return endereco;
-    }
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
     }
     public String getCpf() {
         return cpf;
     }
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
     }
     public void setMatricula(String matricula) {
         this.matricula = matricula;

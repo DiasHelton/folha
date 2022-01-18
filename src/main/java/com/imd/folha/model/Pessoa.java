@@ -1,27 +1,15 @@
 package com.imd.folha.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
 public class Pessoa {
     
-    @Id
-    private Integer id;
-    private String pessoaTipo;
-    private String nome;
+     private String nome;
     private String telefone;
     private String email;
-    private Endereco endereço;
+    private Endereco endereco;
    
     public Pessoa() {
     }
-    public String getPessoaTipo() {
-        return pessoaTipo;
-    }
-    public void setPessoaTipo(String pessoaTipo) {
-        this.pessoaTipo = pessoaTipo;
-    }
+  
     public String getNome() {
         return nome;
     }
@@ -32,13 +20,13 @@ public class Pessoa {
         return telefone;
     }
     public Endereco getEndereço() {
-        return endereço;
+        return endereco;
     }
     public void setEmail(String email) {
         this.email = email;
     }
-    public void setEndereço(Endereco endereço) {
-        this.endereço = endereço;
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
     public void setTelefone(String telefone) {
         this.telefone = telefone;
@@ -46,11 +34,4 @@ public class Pessoa {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public Integer getId() {
-        return id;
-    }
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
 }
