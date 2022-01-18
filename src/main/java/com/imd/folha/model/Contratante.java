@@ -13,24 +13,22 @@ public class Contratante extends Pessoa{
     private Integer id;
     private String razao;
     private String cnpj;
-    private Endereco endereco;
     
-    public Contratante(Integer id, String razao, String cnpj, Endereco endereco) {
+    public Contratante() {
+    }
+    
+    public Contratante(Integer id, String razao, String cnpj, String nome, String telefone, String email, Endereco endereco) {
         this.id = id;
         this.razao = razao;
         this.cnpj = cnpj;
-        this.endereco = endereco;
+        super.setNome(nome);
+        super.setTelefone(telefone);
+        super.setEmail(email);
+        super.setEndereco(endereco);
     }
-    public Contratante() {
-    }
+    
     public String getRazao() {
         return razao;
-    }
-    public Endereco getEndereco() {
-        return endereco;
-    }
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
     }
     public String getCnpj() {
         return cnpj;

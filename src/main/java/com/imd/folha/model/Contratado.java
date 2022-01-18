@@ -15,6 +15,8 @@ public class Contratado extends Pessoa{
     private String matricula;
     private String cpf;
     
+    public Contratado() {
+    }
     public Contratado(Integer id, String matricula, String cpf, String nome, String telefone, String email, Endereco endereco) {
         this.id = id;
         this.matricula = matricula;

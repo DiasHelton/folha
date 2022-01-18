@@ -77,32 +77,5 @@ public class Contracheque {
         this.setTotalLiquido(total);
         return totalLiquido;
     }   
-   
-    //Métodos 
-
-    // public void inserirLancamento(Lancamento n){
-    
-    //     Contracheque c  = Lancamento n;
-    // }
-
-
-
-    // public void excluirLancamento(){}
-   
-
-    //Brainstorm--------------------------------------------------------------------
-
-        // public Float calculaLiquido(lancamentos){
-    //     for (lancamentos l : lancamentos){
-    //     totalLiquido = sum(lancamentos.getLancamento().getValor());
-    //     }
-    //     return totalLiquido;
-    // }
-
-    // public Float calculaTotalLiquido(Lancamento[] esses){
-    //  this.setTotalLiquido(esses[0].getValor() + esses[1].getValor() + esses[2].getValor());   
-    //  return totalLiquido;
-    // }
-
 }
 

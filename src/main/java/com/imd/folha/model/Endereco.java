@@ -12,30 +12,39 @@ public class Endereco {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Pessoa pessoa;
-    private String nomeRua;
+    private String logradouro;
     private String numero;
     private String cep;
     private String bairro;
     private String cidade;
     private String estado;
     private String pais;
+    private String foneFixo;
     
-    public Endereco(Integer id, Pessoa pessoa, String nomeRua, String numero, String cep, String bairro, String cidade,
-            String estado, String pais) {
+    
+    public Endereco(Integer id, Pessoa pessoa, String logradouro, String numero, String cep, String bairro, String cidade,
+            String estado, String pais, String foneFixo) {
         this.id = id;
         this.pessoa = pessoa;
-        this.nomeRua = nomeRua;
+        this.logradouro = logradouro;
         this.numero = numero;
         this.cep = cep;
         this.bairro = bairro;
         this.cidade = cidade;
         this.estado = estado;
         this.pais = pais;
+        this.setFoneFixo(foneFixo);
+    }
+    public String getFoneFixo() {
+        return foneFixo;
+    }
+    public void setFoneFixo(String foneFixo) {
+        this.foneFixo = foneFixo;
     }
     public Endereco() {
     }
     public String getNomeRua() {
-        return nomeRua;
+        return logradouro;
     }
     public Pessoa getPessoa() {
         return pessoa;
@@ -80,7 +89,7 @@ public class Endereco {
         this.numero = numero;
     }
     public void setNomeRua(String nomeRua) {
-        this.nomeRua = nomeRua;
+        this.logradouro = nomeRua;
     }
     public Integer getId() {
         return id;
