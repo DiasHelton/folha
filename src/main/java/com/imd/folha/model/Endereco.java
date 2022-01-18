@@ -21,6 +21,8 @@ public class Endereco {
     private String pais;
     private String foneFixo;
     
+    public Endereco() {
+    }
     
     public Endereco(Integer id, Pessoa pessoa, String logradouro, String numero, String cep, String bairro, String cidade,
             String estado, String pais, String foneFixo) {
@@ -35,13 +37,12 @@ public class Endereco {
         this.pais = pais;
         this.setFoneFixo(foneFixo);
     }
+    
     public String getFoneFixo() {
         return foneFixo;
     }
     public void setFoneFixo(String foneFixo) {
         this.foneFixo = foneFixo;
-    }
-    public Endereco() {
     }
     public String getNomeRua() {
         return logradouro;

@@ -15,8 +15,8 @@ public class Teste{
         orgao.setRazao("DEPARTAMENTO ESTADUAL DE TRÂNSITO DO RIO GRANDE DO NORTE");
     
         Contratado servidor = new Contratado();
-        servidor.setMatricula("221707-4");
-        servidor.setNome("HELTON J D CORDEIRO");
+        servidor.setMatricula("440099-4");
+        servidor.setNome("SAD GURU");
      
         Lancamento l1 = new Lancamento();
         l1.setDescricao("RENDIMENTO");
@@ -40,24 +40,13 @@ public class Teste{
         contra.setContratante(orgao);
         contra.setContratado(servidor);
         contra.setLancamentos(lancamentos);
-
-
-        //Imprimindo dos Lançamentos
-        // System.out.println("");
-        // System.out.println("--- --- --- --- --- --- --- --- --- ---");
-        // System.out.println("--- --- " + c.getNome() + " --- --- ---");
-        // System.out.println("--- --- --- --- --- --- --- --- --- ---");
-        // System.out.println("");
-        // System.out.println("Mat. " + c.getMatricula());
-        // System.out.println(l1.getDescricao() + " --- --- --- " + l1.getValor() );
-        // System.out.println(l2.getDescricao() + "          --- --- --- " + l2.getValor() );
-        // System.out.println("");
-        
+   
         //Imprimindo do Contracheque
         System.out.println("");
-        System.out.println("--- --- --- --- --- --- --- --- --- ---");
-        System.out.println("--- --- " + contra.getContratado().getNome() + " --- --- ---");
-        System.out.println("--- --- --- --- --- --- --- --- --- ---");
+        System.out.println("--- --- --- --- --- --- --- --- --- --- ---");
+        System.out.println("--- --- --- --- Contratado: " + contra.getContratado().getNome() + " --- --- ");
+        System.out.println("--- --- --- --- --- --- --- --- --- --- ---");
+        System.out.println(orgao.getRazao());
         System.out.println("");
         System.out.println("Mat. " + contra.getContratado().getMatricula());
         
@@ -66,12 +55,8 @@ public class Teste{
             System.out.println(l.getDescricao() + " *** *** " + l.getValor());
         } 
             
-        // System.out.println(l1.getDescricao() + " --- --- --- " + l1.getValor() );
-        // System.out.println(l2.getDescricao() + "          --- --- --- " + l2.getValor() );
-        // System.out.println("");
         System.out.println("");
-        System.out.println("");
-        
+               
         Float liquido = contra.calculaTotalLiquido(lancamentos);
         System.out.println("Total Líquido: " + liquido);
 
