@@ -46,7 +46,7 @@ public class Teste{
         System.out.println("--- --- --- --- --- --- --- --- --- --- ---");
         System.out.println("--- --- --- --- Contratado: " + contra.getContratado().getNome() + " --- --- ");
         System.out.println("--- --- --- --- --- --- --- --- --- --- ---");
-        System.out.println(orgao.getRazao());
+        System.out.println("Contratante: " + orgao.getRazao());
         System.out.println("");
         System.out.println("Mat. " + contra.getContratado().getMatricula());
         
